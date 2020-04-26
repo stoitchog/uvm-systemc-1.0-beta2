@@ -1,0 +1,34 @@
+# ignore common patterns
+.*.sw?
+.#*
+*~
+*.exe
+*.l[oa]
+*.[oa]
+*.Plo
+*.so
+
+Makefile
+
+# ignore recommended build directory and variants
+/objdir*/
+
+# ignore in-tree installation
+/include/
+/lib-*/
+
+# ignore MSVC build files
+*.suo
+*.ncb
+*.vcproj.*
+Release/
+Debug/
+#/msvc*/SystemC/SystemC.suo
+#/msvc*/SystemC/SystemC.ncb
+#/msvc*/SystemC/SystemC.vcproj.*
+#/msvc*/SystemC/Release/
+#/msvc*/SystemC/Debug/
+
+# ignore Doxygen documentation
+/docs/*/doxygen/html/
+/docs/*/doxygen/*.tag
