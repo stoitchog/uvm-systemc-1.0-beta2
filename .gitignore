@@ -10,6 +10,9 @@
 
 Makefile
 
+# ignore autoconf cache directory
+/autom4te.cache/
+
 # ignore recommended build directory and variants
 /objdir*/
 
