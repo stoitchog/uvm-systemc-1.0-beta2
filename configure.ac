@@ -116,7 +116,7 @@ case "$target" in
                 ;;
         esac
         if test "$GXX" = "yes"; then
-                EXTRA_CXXFLAGS="${EXTRA_CXXFLAGS} -arch ${CPU_ARCH} -std=c++11"
+                EXTRA_CXXFLAGS="${EXTRA_CXXFLAGS} -arch ${CPU_ARCH} -std=c++11 -DSC_NO_WRITE_CHECK"
                 LDFLAG_RPATH="-Wl,-rpath -Wl,"
         else
                 AC_MSG_ERROR("sorry... compiler not supported.")

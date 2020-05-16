@@ -1,0 +1,2 @@
+../configure --with-systemc=yes --with-arch-suffix=no  --prefix=/usr/local/systemc/  --enable-debug --disable-optimize
+

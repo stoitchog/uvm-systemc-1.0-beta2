@@ -280,6 +280,11 @@ void uvm_object_registry<T>::set_inst_override(
     else
       loc_inst_path << parent->get_full_name() << "." << inst_path;
   }
+  else
+  {
+    loc_inst_path << inst_path;
+  }
+  
   uvm_coreservice_t* cs = uvm_coreservice_t::get();
   uvm_factory* factory = cs->get_factory();
 

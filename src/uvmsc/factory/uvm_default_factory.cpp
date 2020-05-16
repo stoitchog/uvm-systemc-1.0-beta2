@@ -251,9 +251,9 @@ void uvm_default_factory::set_type_override_by_type( uvm_object_wrapper* origina
   // register the types if not already done so, for the benefit of string-based lookup
   if ( m_types.find(original_type) == m_types.end() )
     do_register(original_type);
-
-  if ( m_types.find(original_type) == m_types.end() )
-    do_register(override_type);
+  
+  if ( m_types.find(override_type) == m_types.end() )
+      do_register(override_type);
 
   // check for existing type override
   for( m_overrides_listItT
@@ -304,7 +304,7 @@ void uvm_default_factory::set_type_override_by_type( uvm_object_wrapper* origina
 //----------------------------------------------------------------------------
 // member function: set_type_override_by_name
 //
-//! Configures the factory to create an object of the override’s type whenever
+//! Configures the factory to create an object of the overrideï¿½s type whenever
 //! a request is made to create an object of the original type, provided no
 //! instance override applies. The original type is typically a super class of
 //! the override type.
@@ -434,8 +434,8 @@ void uvm_default_factory::set_inst_override_by_type( uvm_object_wrapper* origina
   // register the types if not already done so
   if ( m_types.find(original_type) == m_types.end() )
     do_register(original_type);
-
-  if ( m_types.find(original_type) == m_types.end() )
+    
+  if ( m_types.find(override_type) == m_types.end() )
     do_register(override_type);
 
   if ( check_inst_override_exists(original_type,override_type,full_inst_path) )
